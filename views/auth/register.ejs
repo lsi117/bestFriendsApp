@@ -1,5 +1,12 @@
 <% include ../partials/boilerplate %>
+<div class="container">
 
+<h1 id='banner'>BEST FRIENDS</h1>
+<p>An app that lets you save pet shelters close to you! So that you can adopt a new best friend!</p>
+<hr>
+<br />
+<p>Registration Page! Please fill out the form below!</p>
+<br />
 <div class="add">
   <form method="POST" action="/auth/register">
     <input type="text" name="username" placeholder="Username" />
@@ -7,6 +14,10 @@
     <input type="email" name="email" placeholder="Email" />
     <input type="submit" value="Register" />
   </form>
-</div>
+  <br />
+  <hr>
+      <p>After submission you will be redirected to the login page!</p>
 
+</div>
+</div>
 <% include ../partials/end %>

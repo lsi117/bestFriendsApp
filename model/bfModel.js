@@ -13,7 +13,7 @@ Shelters.findAll = () =>
   Shelters.create = (shelters, userId) =>{
   return db.one(
     `INSERT INTO shelters
-    (name, zipcode, description, pets, userId)
+    (name, zipcode, description, pets, user_id)
     VALUES($1, $2, $3, $4, $5)
     RETURNING *`, [shelters.name, shelters.zipcode, shelters.description, shelters.pets, userId])
 }
