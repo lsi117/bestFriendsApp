@@ -1,16 +1,17 @@
 body{
-  background-color: whitesmoke;
+  background-image: url('https://i.pinimg.com/736x/7f/a7/ff/7fa7ffb6c367a61aa69692a7a6781e97--bestfriends-adorable-animals.jpg');
+
 }
 
 .saved{
-  width: 400px;
-  height: 250px;
+  width: 300px;
+  height: 350px;
   background-color: rgba(0,150,150, 1);
   position: relative;
   float: left;
-  border: 3px black solid;
+  border: 5px black solid;
   padding: 10px;
-  margin: 10px;
+  margin: 35px;
 }
 
 .savedSingle{
@@ -46,7 +47,7 @@ h1{
 
 p{
   font-family: verdana;
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
   color: white;
 }
@@ -57,6 +58,32 @@ form{
 
 input:hover{
   background-color: floralwhite;
+  cursor: pointer;
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: yellow;
+}
+
+label{
+  color: white;
+}
+
+a{
+  text-decoration: none;
+  font-size: 15px;
+  color: yellow;
+}
+
+a:hover{
+  cursor: pointer;
+}
+
+#banner{
+  font-size: 70px;
+  font-weight: bolder;
+  font-family: verdana;
 }
 
 #userSaved{

@@ -1,5 +1,6 @@
 <% include ./partials/boilerplate.ejs %>
-<h1 id="userSaved">Shelters Saved: Scroll</h1>
+<h1 id="userSaved">Pet Shelters: </h1>
+<br />
 <br />
   <h1>Add A New Shelter!</h1>
   <form action="/bfAllView" method="POST" accept-charset="utf-8">
@@ -18,14 +19,17 @@
 <br />
 <p><%= shelters.name %></p>
 <br />
-
 <label>Shelter Zipcode: </label>
+<br />
 <p><%= shelters.zipcode %></p>
+<br />
 <a href="/bfAllView/<%= shelters.id %>">Click here to edit Zipcode!</a>
 <br />
 
 <label>Shelter Description: </label>
+<br />
 <p><%= shelters.description %></p>
+<br />
 <a href="/bfAllView/<%= shelters.id%>">Click here to edit Description!</a>
 <br />
 
@@ -41,8 +45,9 @@
 
 <%= allData.name %>
 
-
-
 </div>
+  <h1>Please Scroll</h1>
+    <a href="/">Log off</a> <!--sends user back to log in page-->
+
 
 <% include ./partials/end.ejs %>

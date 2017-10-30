@@ -17,9 +17,8 @@
 <!--form to update pet shelter information-->
   <h1>Need to update information about this shelter? Fill out the form below.</h1>
   <form action="/bfAllView/<%= allData.id%>?_method=PUT" method="POST" accept-charset="utf-8">
-<label>Update Shelter Name: </label>
       <input
-        type="text"
+        type="hidden"
         name="name"
         placeholder="name"
         value="<%= allData.name %>"  />
@@ -29,15 +28,14 @@
         name="zipcode"
         placeholder="zipcode"
         value="<%= allData.zipcode %>"  />
-      <label>Update Shelter description: </label>
+      <label>Update Shelter Description: </label>
       <input
         type="text"
         name="description"
         placeholder="description"
         value="<%= allData.description %>" />
-        <label>Update Shelter Pets: </label>
         <input
-        type="text"
+        type="hidden"
         name="pets"
         placeholder="pets"
         value="<%= allData.pets %>"  />
