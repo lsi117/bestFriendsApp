@@ -1,0 +1,48 @@
+<% include ./partials/boilerplate.ejs %>
+<h1 id="userSaved">Shelters Saved: Scroll</h1>
+<br />
+  <h1>Add A New Shelter!</h1>
+  <form action="/bfAllView" method="POST" accept-charset="utf-8">
+    <input name="shelterName" placeholder="Enter Shelter Name">
+    <input name="zipcode" placeholder="Enter Shelter Zipcode">
+    <input name="description" placeholder="Enter Shelter Description">
+    <input name="pets" placeholder="Enter Shelter Adoptable/Available Pets">
+    <input type="submit" value="Add Shelter">
+  </form>
+  <br />
+</div>
+<div class="container">
+<% allData.forEach((shelters) => { %>
+<div class="saved">
+<label>Shelter Name: </label>
+<br />
+<p><%= shelters.sheltername %></p>
+<br />
+
+<label>Shelter Zipcode: </label>
+<p><%= shelters.zipcode %></p>
+<a href="/bfAllView/<%= shelters.id %>">Click here to edit Zipcode!</a>
+<br />
+
+<label>Shelter Description: </label>
+<p><%= shelters.description %></p>
+<a href="/bfAllView/<%= shelters.id%>">Click here to edit Description!</a>
+<br />
+
+<label>Shelter Pets Up For Adoption: </label>
+<p><%= shelters.pets %></p>
+<br />
+<form method="POST" action="/bfAllView/<%= shelters.id %>?_method=DELETE">
+<button type="submit">Delete This Shelter!</button>
+</form>
+</div>
+
+<% }) %>
+
+<%= allData.sheltername %>
+
+
+
+</div>
+
+<% include ./partials/end.ejs %>

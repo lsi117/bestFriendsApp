@@ -1,0 +1,25 @@
+<% include ./partials/boilerplate.ejs %>
+
+<div class="container">
+  <form action="/bfAllView/<%= allData.id%>" method="POST" accept-charset="utf-8">
+      <label>Shelter Zipcode: </label>
+      <input
+      type="number"
+      name="zipcode"
+      placeholder="zipcode"
+      value="<%= allData.zipcode %>"  />
+
+      <label>Shelter Description: </label>
+      <input
+        type="text"
+        name="description"
+        placeholder="description"
+        value="<%= allData.description %>"  />
+
+      <input type="submit" value="Submit Edit(s) !" />
+</form>
+
+<a href="/bfAllView">Pet Shelters Main Page</a>
+</div>
+
+<% include ./partials/end.ejs %>

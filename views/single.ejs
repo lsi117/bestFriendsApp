@@ -1,0 +1,38 @@
+<% include ./partials/boilerplate.ejs %>
+
+<!--single shelter information-->
+<div class="container">
+<div class="savedSingle">
+  <label>Shelter Name: </label>
+<p><%= allData.sheltername%></p>
+  <label>Shelter Zipcode: </label>
+<p><%= allData.zipcode%></p>
+  <label>Shelter Description: </label>
+<p><%= allData.description%></p>
+  <label>Shelter Pets Up For Adoption: </label>
+<p><%= allData.pets%></p>
+</div>
+</div>
+
+<!--form to update pet shelter information-->
+  <h1>Need to update information about this shelter? Fill out the form below.</h1>
+  <form action="/bfAllView/<%= allData.id%>?_method=PUT" method="POST" accept-charset="utf-8">
+<label>Update Shelter Zipcode: </label>
+      <input
+        type="text"
+        name="zipcode"
+        placeholder="zipcode"
+        value="<%= allData.zipcode %>"  />
+      <label>Update Shelter description: </label>
+      <input
+        type="text"
+        name="description"
+        placeholder="description"
+        value="<%= allData.description %>" />
+      <input type="submit" value="Update it!" />
+
+      <br />
+      <hr>
+
+  <a href="/bfAllView/">Click here to go back to the main page</a>
+<% include ./partials/end.ejs %>

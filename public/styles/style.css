@@ -1,0 +1,68 @@
+body{
+  background-color: whitesmoke;
+}
+
+.saved{
+  width: 400px;
+  height: 250px;
+  background-color: rgba(0,150,150, 1);
+  position: relative;
+  float: left;
+  border: 3px black solid;
+  padding: 10px;
+  margin: 10px;
+}
+
+.savedSingle{
+  width: 700px;
+  height: 400px;
+  background-color: rgba(0,0,140, 0.4);
+  position: relative;
+  border: 3px white solid;
+  line-height: 45px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.container{
+  width:800px;
+  height: 500px;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  background-color: lightblue;
+  position: relative;
+  margin: 0 auto;
+  padding: 20px;
+  border: 10px #FF6603 solid;
+  }
+
+h1{
+  color: #FF6603;
+  font-family: verdana;
+  font-size: 15px;
+  text-align: center;
+  margin: 15px;
+}
+
+p{
+  font-family: verdana;
+  font-size: 15px;
+  text-align: center;
+  color: white;
+}
+
+form{
+  text-align: center;
+}
+
+input:hover{
+  background-color: floralwhite;
+}
+
+#userSaved{
+font-family: verdana;
+font-size: 25px;
+color: #FF6603;
+text-align: center;
+margin: 0 auto;
+}
