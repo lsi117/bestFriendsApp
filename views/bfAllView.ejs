@@ -11,6 +11,7 @@
     <input type="submit" value="Add Shelter">
   </form>
   <br />
+  <br />
 </div>
 <div class="container">
 <% allData.forEach((shelters) => { %>
@@ -46,8 +47,11 @@
 <%= allData.name %>
 
 </div>
-  <h1>Please Scroll</h1>
-    <a href="/">Log off</a> <!--sends user back to log in page-->
 
+  <h1>Please Scroll</h1>
+
+  <div id="logoff">
+    <p><a href="./auth/login">Log off</a></p><!--sends user back to log in page-->
+  </div>
 
 <% include ./partials/end.ejs %>

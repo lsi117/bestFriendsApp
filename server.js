@@ -3,18 +3,30 @@ const logger = require('morgan')
 const path = require('path')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const passport = require('passport');
 
 
 //starts the app
 const app = express()
+require('dotenv').config();
 
-app.use(methodOverride('_method'))
 
 
 //configurations
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
+app.use(methodOverride('_method'))
+app.use(cookieParser());
+//app.use(session({
+  //secret: process.env.SECRET_KEY,         //this will be a secret key, remember a sk can be anything you want it to be
+  //resave: false,
+ // saveUninitialized: true,
+//}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 //static config
 app.use(express.static('public'))
@@ -31,8 +43,15 @@ app.listen(port,()=>{
 
 
 app.get('/',(req,res)=>{
-  res.render('index')
+  res.render('index', {
+    auth: (req.user) ? true: false,
+  })
 })
+
+const authRoutes = require('./routes/authRoute');
+app.use('/auth', authRoutes);
+const userRoutes = require('./routes/userRoute');
+app.use('/user', userRoutes);
 
 //route requires
 const bfRoute = require('./routes/bfRoute.js')

@@ -1,6 +1,5 @@
 Log of Errors:
 ERROR #1:
-
 SyntaxError: missing ) after argument list
     at createScript (vm.js:74:10)
     at Object.runInThisContext (vm.js:116:10)
@@ -15,8 +14,57 @@ SyntaxError: missing ) after argument list
 
 
 ERROR #2:
-
 GET /bfAllView/styles/reset.css 404 0.817 ms - 14
 GET /bfAllView/styles/style.css 404 0.916 ms - 14
 GET /bfAllView/styles/reset.css 404 0.788 ms - 14
 GET /bfAllView/styles/style.css 404 0.906 ms - 14
+
+
+ERROR #3:
+/Users/laureninacio/bestFriendsApp/services/auth/local.js:9
+init();
+^
+
+TypeError: init is not a function
+    at Object.<anonymous> (/Users/laureninacio/bestFriendsApp/services/auth/local.js:9:1)
+    at Module._compile (module.js:624:30)
+    at Object.Module._extensions..js (module.js:635:10)
+    at Module.load (module.js:545:32)
+    at tryModuleLoad (module.js:508:12)
+    at Function.Module._load (module.js:500:3)
+    at Module.require (module.js:568:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/Users/laureninacio/bestFriendsApp/routes/authRoute.js:3:18)
+    at Module._compile (module.js:624:30
+
+ERROR #4:
+module.js:529
+    throw err;
+    ^
+
+Error: Cannot find module '../controllers/usersController'
+    at Function.Module._resolveFilename (module.js:527:15)
+    at Function.Module._load (module.js:476:23)
+    at Module.require (module.js:568:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/Users/laureninacio/bestFriendsApp/routes/authRoute.js:5:25)
+    at Module._compile (module.js:624:30)
+    at Object.Module._extensions..js (module.js:635:10)
+    at Module.load (module.js:545:32)
+    at tryModuleLoad (module.js:508:12)
+    at Function.Module._load (module.js:500:3)
+
+    ERROR #5:
+    QueryResultError: 0
+    at new QueryResultError (/Users/laureninacio/bestFriendsApp/node_modules/pg-promise/lib/errors/queryResult.js:122:24)
+    at Query.ctx.db.client.query (/Users/laureninacio/bestFriendsApp/node_modules/pg-promise/lib/query.js:192:41)
+    at Query.handleReadyForQuery (/Users/laureninacio/bestFriendsApp/node_modules/pg/lib/query.js:126:10)
+    at Connection.<anonymous> (/Users/laureninacio/bestFriendsApp/node_modules/pg/lib/client.js:163:19)
+    at emitOne (events.js:115:13)
+    at Connection.emit (events.js:210:7)
+    at Socket.<anonymous> (/Users/laureninacio/bestFriendsApp/node_modules/pg/lib/connection.js:118:12)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:266:12)
+
+

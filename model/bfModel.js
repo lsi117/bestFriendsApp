@@ -3,7 +3,7 @@ const db = require('../db/config')
 const Shelters = {}
 
 Shelters.findAll = () =>
-  db.query('SELECT * FROM shelters');
+  db.query('SELECT * FROM shelters ORDER BY id ASC');
 
   Shelters.findById = id => {
     return db.one(
