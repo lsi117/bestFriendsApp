@@ -13,21 +13,21 @@ Shelters.findAll = () =>
   Shelters.create = shelters =>{
   return db.one(
     `INSERT INTO shelters
-    (shelterName, zipcode, description, pets)
+    (name, zipcode, description, pets)
     VALUES($1, $2, $3, $4)
-    RETURNING *`, [shelters.shelterName, shelters.zipcode, shelters.description, shelters.pets])
+    RETURNING *`, [shelters.name, shelters.zipcode, shelters.description, shelters.pets])
 }
 
 
 Shelters.update = (shelters, id) =>{
     return db.one(
       `UPDATE shelters SET
-      shelterName = $1,
+      name = $1,
       zipcode = $2,
       description = $3,
       pets = $4
       WHERE id = $5
-      RETURNING *`, [shelters.shelterName, shelters.zipcode, shelters.description, shelters.pets, id])
+      RETURNING *`, [shelters.name, shelters.zipcode, shelters.description, shelters.pets, id])
 }
 
 Shelters.destroy = id => {

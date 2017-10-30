@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS users (
 \c bf
 CREATE TABLE IF NOT EXISTS shelters (
   id SERIAL PRIMARY KEY,
-  shelterName VARCHAR(255),
+  name VARCHAR(255),
   zipcode INTEGER,
   description TEXT,
   pets VARCHAR(255),

@@ -14,7 +14,7 @@ bfController.index = (req, res) => {
 
     bfController.create = (req, res) =>{
     Shelters.create({
-      shelterName: req.body.shelterName,
+      name: req.body.name,
       zipcode: req.body.zipcode,
       description: req.body.description,
       pets: req.body.pets,
@@ -53,7 +53,7 @@ bfController.index = (req, res) => {
 
   bfController.update = (req,res) =>{
     Shelters.update({
-      shelterName: req.body.shelterName,
+      name: req.body.name,
       zipcode: req.body.zipcode,
       description: req.body.description,
       pets: req.body.pets,

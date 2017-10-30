@@ -3,6 +3,12 @@
 <div class="container">
   <form action="/bfAllView/<%= allData.id%>" method="POST" accept-charset="utf-8">
       <label>Shelter Zipcode: </label>
+            <input
+      type="text"
+      name="name"
+      placeholder="name
+      value="<%= allData.name %>"  />
+
       <input
       type="number"
       name="zipcode"
@@ -16,6 +22,11 @@
         placeholder="description"
         value="<%= allData.description %>"  />
 
+      <input
+      type="text"
+      name="pets"
+      placeholder="pets"
+      value="<%= allData.pets %>"  />
       <input type="submit" value="Submit Edit(s) !" />
 </form>
 

@@ -4,7 +4,7 @@
 <div class="container">
 <div class="savedSingle">
   <label>Shelter Name: </label>
-<p><%= allData.sheltername%></p>
+<p><%= allData.name%></p>
   <label>Shelter Zipcode: </label>
 <p><%= allData.zipcode%></p>
   <label>Shelter Description: </label>
@@ -17,9 +17,15 @@
 <!--form to update pet shelter information-->
   <h1>Need to update information about this shelter? Fill out the form below.</h1>
   <form action="/bfAllView/<%= allData.id%>?_method=PUT" method="POST" accept-charset="utf-8">
-<label>Update Shelter Zipcode: </label>
+<label>Update Shelter Name: </label>
       <input
         type="text"
+        name="name"
+        placeholder="name"
+        value="<%= allData.name %>"  />
+     <label>Update Shelter Zipcode: </label>
+      <input
+        type="number"
         name="zipcode"
         placeholder="zipcode"
         value="<%= allData.zipcode %>"  />
@@ -29,6 +35,12 @@
         name="description"
         placeholder="description"
         value="<%= allData.description %>" />
+        <label>Update Shelter Pets: </label>
+        <input
+        type="text"
+        name="pets"
+        placeholder="pets"
+        value="<%= allData.pets %>"  />
       <input type="submit" value="Update it!" />
 
       <br />
