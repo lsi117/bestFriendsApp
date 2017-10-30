@@ -10,16 +10,16 @@ Shelters.findAll = () =>
       'SELECT * FROM shelters WHERE id = $1', [id]);
   };
 
-  Shelters.create = shelters =>{
+  Shelters.create = (shelters, userId) =>{
   return db.one(
     `INSERT INTO shelters
-    (name, zipcode, description, pets)
-    VALUES($1, $2, $3, $4)
-    RETURNING *`, [shelters.name, shelters.zipcode, shelters.description, shelters.pets])
+    (name, zipcode, description, pets, userId)
+    VALUES($1, $2, $3, $4, $5)
+    RETURNING *`, [shelters.name, shelters.zipcode, shelters.description, shelters.pets, userId])
 }
 
 
-Shelters.update = (shelters, id) =>{
+Shelters.update = (shelters, sheltersId) =>{
     return db.one(
       `UPDATE shelters SET
       name = $1,
@@ -27,7 +27,7 @@ Shelters.update = (shelters, id) =>{
       description = $3,
       pets = $4
       WHERE id = $5
-      RETURNING *`, [shelters.name, shelters.zipcode, shelters.description, shelters.pets, id])
+      RETURNING *`, [shelters.name, shelters.zipcode, shelters.description, shelters.pets, sheltersId])
 }
 
 Shelters.destroy = id => {
