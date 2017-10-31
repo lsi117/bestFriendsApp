@@ -1,6 +1,7 @@
 
 const passport = require('passport');
 const User = require('../../model/userModel.js');
+console.log('passport working!')
 
 module.exports = () => {
   passport.serializeUser((user, done) => {

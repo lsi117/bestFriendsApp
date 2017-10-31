@@ -67,4 +67,18 @@ Error: Cannot find module '../controllers/usersController'
     at Socket.emit (events.js:210:7)
     at addChunk (_stream_readable.js:266:12)
 
+ERROR #6:
+POST /auth/login 500 11.110 ms - 1029
+QueryResultError: 0
+    at new QueryResultError (/Users/laureninacio/bestFriendsApp/node_modules/pg-promise/lib/errors/queryResult.js:122:24)
+    at Query.ctx.db.client.query (/Users/laureninacio/bestFriendsApp/node_modules/pg-promise/lib/query.js:192:41)
+    at Query.handleReadyForQuery (/Users/laureninacio/bestFriendsApp/node_modules/pg/lib/query.js:126:10)
+    at Connection.<anonymous> (/Users/laureninacio/bestFriendsApp/node_modules/pg/lib/client.js:163:19)
+    at emitOne (events.js:115:13)
+    at Connection.emit (events.js:210:7)
+    at Socket.<anonymous> (/Users/laureninacio/bestFriendsApp/node_modules/pg/lib/connection.js:118:12)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at addChunk (_stream_readable.js:266:12)
 
+    --happens when i enter incorrect password/user name..i think it has something to do with the database

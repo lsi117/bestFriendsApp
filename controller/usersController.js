@@ -1,3 +1,5 @@
+console.log('user controller is working!')
+
 const User = require('../model/userModel.js');
 const bcrypt = require('bcryptjs');
 
@@ -5,7 +7,7 @@ const usersController = {};
 
 usersController.index = (req, res) => {
   res.json({
-    message: 'User profile here',
+    message: user_id,
     user: req.user,
   });
 };

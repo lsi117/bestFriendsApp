@@ -15,36 +15,38 @@
 </div>
 <div class="container">
 <% allData.forEach((shelters) => { %>
-<div class="saved">
-<label>Shelter Name: </label>
-<br />
-<p><%= shelters.name %></p>
-<br />
-<label>Shelter Zipcode: </label>
-<br />
-<p><%= shelters.zipcode %></p>
-<br />
-<a href="/bfAllView/<%= shelters.id %>">Click here to edit Zipcode!</a>
-<br />
 
-<label>Shelter Description: </label>
-<br />
-<p><%= shelters.description %></p>
-<br />
-<a href="/bfAllView/<%= shelters.id%>">Click here to edit Description!</a>
-<br />
 
-<label>Shelter Pets Up For Adoption: </label>
-<p><%= shelters.pets %></p>
-<br />
-<form method="POST" action="/bfAllView/<%= shelters.id %>?_method=DELETE">
-<button type="submit">Delete This Shelter!</button>
-</form>
+      <div class="saved" data-sheltersid="<%= shelters.id %>">
+        <label>Shelter Name: </label>
+        <br />
+        <p><%= (shelters.saved) ? 'Done' : shelters.name %></p>
+        <br />
+        <label>Shelter Zipcode: </label>
+        <p><%= (shelters.saved) ? 'Done' : shelters.zipcode %></p>
+        <br />
+        <a href="/bfAllView/<%= shelters.id %>">Click here to edit Zipcode!</a>
+        <br />
+        <br />
+        <label>Shelter Description: </label>
+        <p><%= (shelters.saved) ? 'Done' : shelters.description %></p>
+        <br />
+        <a href="/bfAllView/<%= shelters.id%>">Click here to edit Description!</a>
+        <br />
+        <br />
+        <label>Shelter Pets Up For Adoption: </label>
+        <p><%= (shelters.saved) ? 'Done' : shelters.pets %></p>
+        <br />
+        <br />
+        <form method="POST" action="/bfAllView/<%= shelters.id %>?_method=DELETE">
+        <button type="submit">Delete This Shelter!</button>
+        <hr>
+        <br />
+        <!--delete form below-->
+        </form>
+
+
 </div>
-
-      <div class="completion" data-sheltersid="<%= shelters.id %>">
-        <p><%= (shelters.completion) ? 'Done' : 'shelters' %></p>
-
 <% }) %>
 
 <%= allData.name %>

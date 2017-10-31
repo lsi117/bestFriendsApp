@@ -1,17 +1,19 @@
 <% include ../partials/boilerplate %>
 <div class="container">
 
-<h1 id='banner'>BEST FRIENDS</h1>
+<h1 id='banner'>&#128041;BEST FRIENDS &#128001;</h1>
 <p>An app that lets you save shelters to adopt an animal, a new best friend!</p>
 <br />
-
+<p>Don't have an account? Please register <a href="./register">here!</a></p>
+<br />
 <div class="add">
   <form method="POST" action="/auth/login">
-    <input type="text" name="username" placeholder="Username" />
-    <input type="password" name="password" placeholder="Password" />
+    <input type="text" name="username" placeholder="Username" required/>
+    <input type="password" name="password" placeholder="Password" required/>
     <input type="submit" value="Log In" />
   </form>
 </div>
+<img src="https://i.pinimg.com/originals/8e/c3/68/8ec368dc41a4ad93bb8b985fa5f827f1.png" alt="cute dog" />
 </div>
 
 <% include ../partials/end %>

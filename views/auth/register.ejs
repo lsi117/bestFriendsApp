@@ -1,23 +1,29 @@
 <% include ../partials/boilerplate %>
 <div class="container">
 
-<h1 id='banner'>BEST FRIENDS</h1>
+<h1 id='banner'> &#128021; BEST FRIENDS &#128008;</h1>
 <p>An app that lets you save pet shelters close to you! So that you can adopt a new best friend!</p>
 <hr>
 <br />
 <p>Registration Page! Please fill out the form below!</p>
 <br />
+<p>If you already have an account then please click <a href="./login">here!</a> to log in!</p>
+<br />
+<!--registration form below-->
 <div class="add">
   <form method="POST" action="/auth/register">
-    <input type="text" name="username" placeholder="Username" />
-    <input type="password" name="password" placeholder="Password" />
-    <input type="email" name="email" placeholder="Email" />
-    <input type="submit" value="Register" />
+    <input type="text" name="username" placeholder="Username" required/>
+    <input type="password" name="password" placeholder="Password" required/>
+    <input type="email" name="email" placeholder="Email" required/>
+   <input type="submit" value="Register" />&#128106;
   </form>
   <br />
   <hr>
-      <p>After submission you will be redirected to the login page!</p>
+      <p>&#128007; After submission you will be redirected to the login page! &#129422;</p>
+<img src="https://stickershop.line-scdn.net/stickershop/v1/product/1013845/LINEStorePC/main@2x.png;compress=true?__=20161019" alt="dog" />
 
 </div>
 </div>
+
+
 <% include ../partials/end %>
