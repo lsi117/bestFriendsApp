@@ -43,7 +43,7 @@ app.listen(port,()=>{
 
 
 app.get('/',(req,res)=>{
-  res.render('index', {
+  res.render('./auth/register', {
     auth: (req.user) ? true: false,
   })
 })
