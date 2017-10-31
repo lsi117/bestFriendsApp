@@ -1,5 +1,5 @@
-/*table for users in db*/
-\c bf
+/*table for users in db re-add connections for local deployment*/
+--\c bf
 CREATE TABLE IF NOT EXISTS users (
   id SERIAL PRIMARY KEY,
   username VARCHAR(255) UNIQUE NOT NULL,
@@ -7,8 +7,8 @@ CREATE TABLE IF NOT EXISTS users (
   email VARCHAR(255)
 );
 
-/*table for my app db*/
-\c bf
+/*table for my app db re-add connections for local deployment*/
+--\c bf
 CREATE TABLE IF NOT EXISTS shelters (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
