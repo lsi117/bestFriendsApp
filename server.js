@@ -41,9 +41,9 @@ app.listen(port,()=>{
   console.log(`alive on ${port}`)
 })
 
-//manipulate this once fin for heroku
+
 app.get('/',(req,res)=>{
-  res.render('/auth/register', {
+  res.render('index', {
     auth: (req.user) ? true: false,
   })
 })
