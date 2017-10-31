@@ -26,7 +26,7 @@ usersController.create = (req, res, next) => {
       res.redirect('/user');
     });
   }).catch(err => {
-    console.log(err);
+    console.log('errro ', err);
     res.status(500).json({error: err});
   });
 }

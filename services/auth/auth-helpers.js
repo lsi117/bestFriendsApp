@@ -5,7 +5,7 @@ function comparePass(userPassword, dbPassword) {
 }
 
 function loginRedirect(req, res, next) {
-  if (req.user) return res.redirect('/user');
+  if (req.user) return res.redirect('/bfAllView'); //had user before
   return next();
 }
 

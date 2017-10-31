@@ -4,7 +4,7 @@ const User = {};
 
 
 User.findByUserName = (username) => {
-  return db.one(`
+  return db.oneOrNone(`
     SELECT * FROM users
     WHERE username = $1
   `, [username]);
