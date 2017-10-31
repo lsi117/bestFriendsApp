@@ -41,7 +41,7 @@ app.listen(port,()=>{
   console.log(`alive on ${port}`)
 })
 
-
+//need to work on ROOT fldr for deployment
 app.get('/',(req,res)=>{
   res.render('index', {
     auth: (req.user) ? true: false,
