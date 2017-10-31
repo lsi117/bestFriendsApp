@@ -32,7 +32,7 @@ bfController.index = (req, res) => {
       zipcode: req.body.zipcode,
       description: req.body.description,
       pets: req.body.pets,
-      }, req.user.id).then(allData =>{
+      }).then(allData =>{
       res.redirect(`/bfAllView/${allData.id}`)
     }).catch(err =>{
       console.log(err)

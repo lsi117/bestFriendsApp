@@ -5,7 +5,7 @@ let db;
 if (process.env.NODE_ENV === 'development' || !process.env.NODE_ENV) {
   db = pgp({
   // custom database name
-  database: 'thundercats_development',
+  database: 'bf',
   port: 5432,
   host: 'localhost',
   });
