@@ -21,7 +21,7 @@ modules used: method-override(for the forms, put, post), bcryptjs(used for passw
 
 A code snippet of a part of the app you're particularly proud of
 
-single.ejs 
+bfAllView.ejs 
       I like this because i tried to work on my neatness and i think that this page displays it well, the form especially.
 
 https://github.com/lsi117/bestFriendsApp/blob/master/views/bfAllView.ejs
