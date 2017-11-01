@@ -22,34 +22,11 @@ modules used: method-override(for the forms, put, post), bcryptjs(used for passw
 A code snippet of a part of the app you're particularly proud of
 
 single.ejs 
+      I like this because i tried to work on my neatness and i think that this page displays it well, the form especially.
 
-  <h1>Need to update information about this shelter? Fill out the form below.</h1>
-  <form action="/bfAllView/<%= allData.id%>?_method=PUT" method="POST" accept-charset="utf-8">
-      <input
-        type="hidden"
-        name="name"
-        placeholder="name"
-        value="<%= allData.name %>"  />
-     <label>Update Shelter Zipcode: </label>
-      <input
-        type="number"
-        name="zipcode"
-        placeholder="zipcode"
-        value="<%= allData.zipcode %>"  />
-      <label>Update Shelter Description: </label>
-      <input
-        type="text"
-        name="description"
-        placeholder="description"
-        value="<%= allData.description %>" />
-        <input
-        type="hidden"
-        name="pets"
-        placeholder="pets"
-        value="<%= allData.pets %>"  />
-      <input type="submit" value="Update it!" />
+https://github.com/lsi117/bestFriendsApp/blob/master/views/bfAllView.ejs
+
       
-      I like this because i tried to work on my neatness and i think that this page displays it well.
       
 
 Any things you plan to fix or features you plan to add
