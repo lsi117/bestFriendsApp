@@ -4,6 +4,21 @@ body{
   background-size: cover;
 }
 
+.developer{
+  font-size: 20px;
+  letter-spacing: 0.3em;
+  font-weight: lighter;
+  color: white;
+  font-family: 'Lobster', cursive;
+  margin: 15px;
+}
+
+.developer:hover{
+  cursor: pointer;
+  color: yellow;
+  font-size: 25px;
+}
+
 #logo{
   display: block;
   margin: 0 auto;
