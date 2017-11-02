@@ -1,4 +1,4 @@
---\c bf readd connection for local deployment
+\c bf readd connection for local deployment
 INSERT INTO shelters (name, zipcode, description, pets) VALUES
 ('JustDogs Shelter', '10002', 'a lovely shelter that has just dogs up for adoption', 'dogs'),
 ('Kittens and Cats Shelter', '10009', 'located in the east village a shelter for cats', 'cats'),
